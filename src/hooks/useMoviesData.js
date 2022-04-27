@@ -8,10 +8,10 @@ const useMoviesData = () => {
   const getMoviesRequest = async () => {
     try {
       let response = await axios.get(
-        `http://www.omdbapi.com/?i=tt3896198&apikey=${process.env.REACT_APP_API_KEY}`
+        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s="matrix`
       );
       let data = await response.data;
-      setMovies(data);
+      setMovies(data.Search);
       setLoading(false);
     } catch (error) {
       console.log(error);

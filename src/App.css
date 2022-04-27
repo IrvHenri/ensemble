@@ -3,3 +3,41 @@
   font-size: 45px;
   padding: 1em;
 }
+
+.movie-list-row {
+  display: flex;
+  overflow-x: auto;
+  padding: 45px;
+}
+
+.movie-card {
+  position: relative;
+  margin-right: 10px;
+  border-radius: 15px;
+  padding: 1em;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.movie-card img {
+  width: 100%;
+  min-width: 260px;
+}
+
+.movie-card-content {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  width: 100%;
+  max-width: 260px;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 1em;
+  position: absolute;
+  bottom: 15px;
+  background: rgba(0, 0, 0, 0.8);
+}
