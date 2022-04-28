@@ -8,14 +8,20 @@ import useMoviesData from "./hooks/useMoviesData";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [moviesData, loading] = useMoviesData(searchQuery);
-  const [favorites, setFavorites] = useState([]);
+  const [
+    moviesData,
+    favorites,
+    addFavouriteMovie,
+    removeFavouriteMovie,
+    loading
+  ] = useMoviesData(searchQuery);
+
   return (
     <div className="App">
       <img src="/images/logo.png" className="logo" alt="logo" />
+      <Searchbar setSearchQuery={setSearchQuery} value={searchQuery} />
       <header className="movie-app-header">
         <ListTitle title="Movies" />
-        <Searchbar setSearchQuery={setSearchQuery} value={searchQuery} />
       </header>
       <section className="movie-list-row">
         {!searchQuery ? (
@@ -23,12 +29,22 @@ function App() {
         ) : loading ? (
           <CircularProgress size={80} style={{ margin: "0 auto" }} />
         ) : (
-          <MovieList movies={moviesData} />
+          <MovieList
+            movies={moviesData}
+            isFavesList={false}
+            eventHandler={addFavouriteMovie}
+          />
         )}
       </section>
+      <ListTitle title="Favorites" />
       <section className="movie-list-row">
-        <ListTitle title="Favorites" />
-        {favorites.length > 0 && <MovieList movies={favorites} />}
+        {favorites.length > 0 && (
+          <MovieList
+            movies={favorites}
+            isFavesList={true}
+            eventHandler={removeFavouriteMovie}
+          />
+        )}
       </section>
     </div>
   );

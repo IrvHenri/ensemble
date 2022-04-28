@@ -36,6 +36,8 @@
   width: 250px;
   font-size: 14px;
   outline: 0;
+  margin: 0 auto;
+  margin-top: 1em;
 }
 /* MOVIE LIST ROW */
 
@@ -45,6 +47,9 @@
 }
 
 .movie-list-row {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
   padding: 45px 0;
   margin-top: 2rem;
 }
@@ -68,8 +73,8 @@
   border-radius: 15px;
   transition: transform 300ms ease 100ms;
   flex: 0 0 19.7%;
-  /* overflow: hidden; */
   max-width: 230px;
+  min-width: 230px;
   width: 22%;
 }
 
@@ -92,6 +97,10 @@
   /* position: absolute; */
   bottom: 0px;
   background: rgba(0, 0, 0, 0.8);
+}
+
+.favorite-icon {
+  fill: red;
 }
 
 /* Movie Card Drop Down */
