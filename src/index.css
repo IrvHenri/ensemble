@@ -16,6 +16,7 @@
 body {
   background: #0e1111;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1,
