@@ -1,5 +1,9 @@
+:root {
+  --main-text-color: #e5e5e5;
+}
+
 .App {
-  height: 100vh;
+  /* height: 100vh; */
   padding: 45px;
 }
 
@@ -11,7 +15,7 @@
 }
 
 .list-title {
-  color: #e5e5e5;
+  color: var(--main-text-color);
   font-size: 45px;
 }
 .search-bar {
@@ -31,14 +35,13 @@
 /* MOVIE LIST ROW */
 
 .default-message {
-  color: #e5e5e5;
+  color: var(--main-text-color);
   font-size: 25px;
 }
 
 .movie-list-row {
-  display: flex;
   padding: 45px 0;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .movie-list-row span {
@@ -55,11 +58,12 @@
 .movie-card {
   display: flex;
   position: relative;
+  flex-direction: column;
   margin-right: 10px;
   border-radius: 15px;
   transition: transform 300ms ease 100ms;
   flex: 0 0 19.7%;
-  overflow: hidden;
+  /* overflow: hidden; */
   max-width: 230px;
   width: 22%;
 }
@@ -75,12 +79,33 @@
 .movie-card-content {
   display: flex;
   justify-content: space-between;
-  color: #fff;
+  color: var(--main-text-color);
   width: 100%;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   padding: 1em;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0px;
   background: rgba(0, 0, 0, 0.8);
+}
+
+/* Movie Card Drop Down */
+.movie-card-drop-down {
+  position: relative;
+}
+
+.movie-card-drop-down-btn {
+  display: flex;
+  justify-content: center;
+  background: #f0e901;
+  padding: 1em;
+}
+
+.movie-card-drop-down-label {
+  border: 0.1em solid rgb(77, 77, 77);
+  padding: 1em;
+  background-color: rgb(36, 36, 36);
+  color: var(--main-text-color);
+  position: absolute;
+  width: 100%;
 }

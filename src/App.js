@@ -9,7 +9,7 @@ import useMoviesData from "./hooks/useMoviesData";
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [moviesData, loading] = useMoviesData(searchQuery);
-  console.log({ searchQuery, moviesData });
+  const [favorites, setFavorites] = useState([]);
   return (
     <div className="App">
       <header className="movie-app-header">
@@ -24,6 +24,10 @@ function App() {
         ) : (
           <MovieList movies={moviesData} />
         )}
+      </section>
+      <section className="movie-list-row">
+        <ListTitle title="Favorites" />
+        {favorites.length > 0 && <MovieList movies={moviesData} />}
       </section>
     </div>
   );

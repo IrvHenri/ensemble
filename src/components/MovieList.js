@@ -20,6 +20,7 @@ const MovieList = ({ movies }) => {
               posterUrl={Poster}
               title={Title}
               year={Year}
+              code={imdbID}
             />
           ))}
       </Flickity>
