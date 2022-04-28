@@ -4,7 +4,6 @@ import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import useToggle from "../hooks/useToggle";
 const MovieCard = ({ posterUrl, title, year, code }) => {
   const [isDefault, toggle] = useToggle();
-
   return (
     <div className="movie-card">
       {posterUrl === "N/A" ? (

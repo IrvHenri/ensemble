@@ -12,6 +12,7 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   return (
     <div className="App">
+      <img src="/images/logo.png" className="logo" alt="logo" />
       <header className="movie-app-header">
         <ListTitle title="Movies" />
         <Searchbar setSearchQuery={setSearchQuery} value={searchQuery} />
@@ -27,7 +28,7 @@ function App() {
       </section>
       <section className="movie-list-row">
         <ListTitle title="Favorites" />
-        {favorites.length > 0 && <MovieList movies={moviesData} />}
+        {favorites.length > 0 && <MovieList movies={favorites} />}
       </section>
     </div>
   );
