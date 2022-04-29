@@ -45,6 +45,9 @@
   color: var(--main-text-color);
   font-size: 25px;
 }
+.rec-slider-container {
+  overflow: visible !important;
+}
 
 .movie-list-row {
   padding: 45px 0;
