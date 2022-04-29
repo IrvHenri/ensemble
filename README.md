@@ -4,7 +4,7 @@ A react app that allows users to search and save movies to their favourites list
 
 
 ### Live Demo: 
-[Cinemage](https://distracted-pare-332419.netlify.app/)
+[Cinemage](https://cinemage.netlify.app/)
 
 ### Preview 
 
