@@ -36,7 +36,7 @@ function App() {
           />
         )}
       </section>
-      <ListTitle title="Favorites" />
+      <ListTitle title="Favourites" />
       <section className="movie-list-row">
         {favorites.length > 0 && (
           <MovieList
