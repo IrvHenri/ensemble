@@ -49,6 +49,7 @@
 .movie-list-row {
   padding: 45px 0;
   margin-top: 2rem;
+  min-height: 500px;
 }
 
 .movie-list-row span {

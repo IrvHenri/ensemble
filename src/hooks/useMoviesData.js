@@ -8,7 +8,7 @@ const useMoviesData = (searchQuery) => {
 
   const addFavoriteMovie = (movie) => {
     let isAlreadyFavorited = favorites.some(
-      (favorite) => favorite.imdbID == movie.imdbID
+      (favorite) => favorite.imdbID === movie.imdbID
     );
     if (!isAlreadyFavorited) {
       const newFavorites = [...favorites, movie];
@@ -23,17 +23,17 @@ const useMoviesData = (searchQuery) => {
     setFavorites(newFavorites);
   };
 
-  const getMoviesRequest = async () => {
-    let response = await axios.get(
-      `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${searchQuery}`
-    );
-    let data = await response.data;
-    if (data.Search) {
-      setMoviesData(data.Search);
-      setLoading(false);
-    }
-  };
   useEffect(() => {
+    const getMoviesRequest = async () => {
+      let response = await axios.get(
+        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${searchQuery}`
+      );
+      let data = await response.data;
+      if (data.Search) {
+        setMoviesData(data.Search);
+        setLoading(false);
+      }
+    };
     getMoviesRequest();
   }, [searchQuery]);
   return [
