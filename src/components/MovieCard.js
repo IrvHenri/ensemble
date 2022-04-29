@@ -3,7 +3,7 @@ import noImage from "../utils/no-image-available.png";
 import {
   BsFillCaretDownFill,
   BsFillCaretUpFill,
-  BsHeart,
+  BsPlusLg,
   BsXLg
 } from "react-icons/bs";
 import useToggle from "../hooks/useToggle";
@@ -32,7 +32,7 @@ const MovieCard = ({
           <p>{year}</p>
         </div>
         <div className="favorite-icon" onClick={() => eventHandler(movie)}>
-          {isFavesList ? <BsXLg /> : <BsHeart />}
+          {isFavesList ? <BsXLg /> : <BsPlusLg />}
         </div>
       </footer>
       <div className="movie-card-drop-down">

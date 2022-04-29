@@ -47,9 +47,6 @@
 }
 
 .movie-list-row {
-  display: flex;
-  overflow-x: auto;
-  flex-wrap: nowrap;
   padding: 45px 0;
   margin-top: 2rem;
 }
@@ -58,13 +55,34 @@
   margin-right: 15px;
 }
 
-.flickity-viewport {
+.hHJTFD {
   overflow: visible !important;
-  min-height: 350px;
+}
+.rec-arrow {
+  z-index: 1000;
+}
+.rec-arrow:hover:enabled,
+.rec-arrow:focus:enabled {
+  color: #000 !important;
+  background-color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 0 2px 0 #333 !important;
 }
 
+.rec-dot {
+  height: 5px !important;
+  width: 20px !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 1px 1px rgb(255 255 255 / 20%) !important;
+}
+
+.rec-dot_active {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
 /* Movie Card */
 
+.rec-item-wrapper {
+  overflow: visible !important;
+}
 .movie-card {
   display: flex;
   position: relative;
