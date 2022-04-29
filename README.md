@@ -6,6 +6,15 @@ A react app that allows users to search and save movies to their favourites list
 ### Live Demo: 
 [Cinemage](https://cinemage.netlify.app/)
 
+(<strong>Disclaimer</strong>: The API being used is an insecure http endpoint. For the live demo to work you need to allow insecure content. 
+<br>
+<br>
+ In chrome you can click on the lock icon beside the url, then click site setting then beside Insecure content, select allow. 
+ <br>
+ <br>
+ In firebox you can click on the lock icon then click the arrow in the Site Information panel and click Disable protection for now. 
+ )
+
 ### Preview 
 
 #### Search Results
