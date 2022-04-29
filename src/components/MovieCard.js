@@ -17,7 +17,10 @@ const MovieCard = ({
   movie
 }) => {
   const [isDefault, toggle] = useToggle();
-
+  const dropDownStyles = {
+    transition: "all 200ms ease-in",
+    opacity: isDefault ? "0" : "1"
+  };
   return (
     <div className="movie-card">
       {posterUrl === "N/A" ? (
@@ -39,11 +42,9 @@ const MovieCard = ({
         <div className="movie-card-drop-down-btn" onClick={toggle}>
           {isDefault ? <BsFillCaretDownFill /> : <BsFillCaretUpFill />}
         </div>
-        {!isDefault && (
-          <div className="movie-card-drop-down-label">
-            <p>IMDB CODE: {code} </p>
-          </div>
-        )}
+        <div className="movie-card-drop-down-label" style={dropDownStyles}>
+          <p>IMDB CODE: {code} </p>
+        </div>
       </div>
     </div>
   );
