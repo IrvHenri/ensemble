@@ -86,18 +86,15 @@
 
 .rec-item-wrapper {
   overflow: visible !important;
+  margin: 0 15px;
 }
 .movie-card {
   display: flex;
   position: relative;
   flex-direction: column;
-  margin-right: 10px;
   border-radius: 15px;
   transition: transform 300ms ease 100ms;
-  flex: 0 0 19.7%;
-  max-width: 230px;
-  min-width: 230px;
-  width: 22%;
+  min-width: 230px !important;
 }
 
 .movie-card:hover {
